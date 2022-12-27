@@ -1,22 +1,16 @@
-import React, { useEffect } from 'react'
 import Products from './Products/Products'
 import './Section.css'
-//import p from './Products/p.json'
-const Section = () => {
+const Section = ({ data }) => {
   return (
-    <div className="products">
-      <Products />
-      <Products />
-      <Products />
-      <Products />
-      <Products />
-      <Products />
-      <Products />
-      <Products />
-      <Products />
-      <Products />
-    </div>
+    <section className="products">
+      {data.map((prod) => (
+        <Products
+          price={prod.price}
+          title={prod.title}
+          imageUrl={prod.image}
+        />
+      ))}
+    </section >
   )
 }
-
 export default Section
