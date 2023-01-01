@@ -6,9 +6,9 @@ function App() {
   return (
     <div className="App">
       <Nav />
-        <Section
+      <Section
         data={ArrOfProdacts}
-        />
+      />
     </div>
   );
 }
