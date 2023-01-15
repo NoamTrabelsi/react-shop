@@ -83,7 +83,8 @@ summary,
 time,
 mark,
 audio,
-video {
+video,
+Cart {
   margin: 0;
   padding: 0;
   border: 0;
@@ -104,7 +105,8 @@ header,
 hgroup,
 menu,
 nav,
-section {
+section,
+Cart {
   display: block;
 }
 

@@ -2,6 +2,7 @@ import React from 'react'
 import Filter from './Filter/Filter'
 import Sort from './Sort/Sort'
 import './Nav.css'
+
 const Nav = () => {
   return (
     <nav className="product-filter">

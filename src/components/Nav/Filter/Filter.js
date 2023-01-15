@@ -1,12 +1,21 @@
-import React from 'react'
-import './Filter.css'
+import React from 'react';
+import './Filter.css';
+import MyContext from "../../../MyContext";
+import { useContext } from 'react';
+
 const Filter = () => {
-    const FilterOption = ['All Jackets', '2016', 'jacket', 'Jackets', 'layers', 'Obermeyer', 'Roxy', 'womens'];
-    const FilterlistItems = FilterOption.map((op, i) => <option key={i}>{op}</option >);
+    const {categories, funcFilter} = useContext(MyContext);
     return (
         <div className="collection-sort">
             <label>Filter by:</label>
-            <select>{FilterlistItems}</select>
+            <select onChange={funcFilter}>
+                <option value={"All Item"}>All Item</option>
+                {categories.map((i, index) => (
+                    <option value={i} key={index}>
+                        {i}
+                    </option>
+                ))}
+            </select>
         </div>
     )
 }
